@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>SetTime And SetTimeInterval</h3>
+    <p>1. Asnchronous operation  2. Synchronous operation there are types: 1. SetTimeOut(): 2.SetInterval(): </p>
+    <p>Asnchronous operation: It Will execute the code in non-sequential oder</p>
+    <p>Synchronous operation: It Will execute the code in a sequential oder</p>
+    <h4>Javascript is a Synchronous single threaded programming lanaguage.</h4>
+    <p>SetTimeOut(): setTimeOut executes a function or evulates an expression after a specified delay(in milliseconds).</p>
+    <p>SetInterval(): settime Interval executes a function or evulates an experssion repetadely at a 
+    specified interval(in milliseconds).</p>
+</body>
+<script>
+//1. SetTimeOut.
+    console.log('start')
+    setTimeout(function(){
+        console.log('settime out example')
+    },2000)
+    console.log('stop')
+
+    setTimeout(()=>{
+        console.log('delay after 3 seconds')
+    },3000)
+//With Parameters.
+    setTimeout((name)=>{
+        console.log(`Hello ${name} this message will delay after 4 seconds`)
+    },4000,'Sri')
+
+//2. SetInterval.
+    let intervalId=setInterval(()=>{
+        console.log('setInterval example')
+    },1000)
+
+    let counter=0;
+    let Interval=setInterval(()=>{
+        console.log('Counter',counter++)
+
+        if(counter===5){
+            clearInterval(Interval)
+        }
+    },1000)
+
+    let intervalEx=setInterval((name)=>{
+        console.log('Hello ${name} this message will repeat every second')
+    },5000,'Sam')
+
+    
+
+    
+    
+     
+    
+
+</script>
+</html>
